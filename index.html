@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>musics_with_js</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container" id="container">
+      <img id="cover" class="cover-image" width="200px"  src="./public/cover/bahrom-nazarov-atirguldan-farqingiz-yuq.jpg" alt="">
+      <h2 id="music-title">bahrom-nazarov-atirguldan-farqingiz-yo'q</h2>
+      <audio
+        id="audio"
+        src="./src/music/bahrom-nazarov-atirguldan-farqingiz-yuq.mp3"
+      ></audio>
+      <input id="change-volume" value="20" type="range" min="0" max="100" step="1">
+      <div>
+        <button id="backward-btn"><i class="fa-solid fa-backward"></i></button>
+        <button id="play-btn"><i class="fa-solid fa-play"></i></button>
+        <button id="forward-btn"><i class="fa-solid fa-forward"></i></button>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
