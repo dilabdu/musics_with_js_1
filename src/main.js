@@ -7,23 +7,23 @@ const playBtn = document.getElementById("play-btn");
 const musicTitleEl = document.getElementById("music-title");
 const audioEl = document.getElementById("audio");
 const changeVolumeEl = document.getElementById("change-volume");
-const coverEl=document.getElementById("cover")
+const coverEl = document.getElementById("cover");
 
 let currentVolume = +changeVolumeEl.value / 100;
 audioEl.volume = currentVolume;
 const musics = [
-  "bahrom-nazarov-atirguldan-farqingiz-yuq",
-  "botir_qodirov_-_xoji_onam_(uzhits.net)",
-  "botir-qodirov-sevgisi-yolgonim_(uzhits.net)",
-  "doston-ergashev-kambagalga_(uzhits.net)",
-  "gaybulla-tursunov-janona_(uzhits.net)",
-  "gulinur-janima_(uzhits.net)",
-  "hosila-rahimova-jetama_(uzhits.net)",
-  "jasmin-sevganlari-bor_(uzhits.net)",
-  "munisa-rizayeva-aka-makasi_(uzhits.net)",
-  "munisa-rizayeva-jaloliddin-ahmadaliyev-yetmasmidi-yetmadimi_(uzhits.net)",
-  "ozoda-nursaidova-kok-jiguli_(uzhits.net)",
-  "sardor-mamadaliyev-dada_(uzhits.net)",
+  "Bahrom Nazarov- Uzr Go'zal",
+  "Botir Qodirov - Sevgisi yolg'onim",
+  "Botir Qodirov - Xoji onam",
+  "Doston Ergashev- Kambag'alga",
+  "G'aybulla Tursunov-Janona",
+  "Gulinur -Janima",
+  "Hosila Rahimova- Jetama",
+  "Jasmin- Sevganlari bor",
+  "Munisa -Aka makasi",
+  "Munisa &Jaloliddin yetmadimi",
+  "Ozoda ko'k Jiguli",
+  "Sardor Mamadaliyev-Dada",
 ];
 
 let currentMusic = 0;
@@ -61,8 +61,8 @@ const nextSong = () => {
   currentMusic++;
   changeMusic(currentMusic);
   playMusic();
-  if(currentMusic==musics.length-1){
-    currentMusic=0;
+  if (currentMusic > musics.length - 1) {
+    currentMusic = 0;
   }
 };
 
@@ -70,8 +70,8 @@ const prevSong = () => {
   currentMusic--;
   changeMusic(currentMusic);
   playMusic();
-  if(currentMusic<0){
-    currentMusic=musics.length-1;
+  if (currentMusic < 0) {
+    currentMusic = musics.length - 1;
   }
 };
 
