@@ -14,18 +14,66 @@
     />
   </head>
   <body>
+    <div class="musics-container">
+      <button id="musics-toggler" class="musics-toggler"><i class="fa-solid fa-bars"></i></button>
+      <h2 class="music-title">Music List</h2>
+      <ul class="music-list">
+        <template id="music-item-template">
+          <li onclick="selectMusic(this)" class="music-item">
+            <img
+              class="music-item-cover"
+              src="./cover/Bahrom Nazarov- Uzr Go'zal.jpg"
+              alt="Photo"
+              width="40"
+            />
+            <div>
+              <h5 class="music-name">Bahrom Nazarov- Uzr Go'zal</h5>
+            </div>
+          </li></template
+        >
+      </ul>
+    </div>
     <div class="container" id="container">
-      <img id="cover" class="cover-image" width="150px" height="150px"  src="./public/cover/bahrom-nazarov-atirguldan-farqingiz-yuq.jpg" alt="">
-      <h2 class="text-xl" id="music-title">bahrom-nazarov-atirguldan-farqingiz-yo'q</h2>
+      <img
+        id="cover"
+        class="cover-image"
+        width="150px"
+        height="150px"
+        src="./public/cover/bahrom-nazarov-atirguldan-farqingiz-yuq.jpg"
+        alt=""
+      />
+      <div class="proccess">
+        <span class="time time-start" id="start-time">00:00</span>
+        <div class="proccess-container">
+          <span class="time full-time" id="full-time">00:00</span>
+        </div>
+      </div>
+
+      <h2 class="text-xl" id="music-title">
+        bahrom-nazarov-atirguldan-farqingiz-yo'q
+      </h2>
       <audio
         id="audio"
         src="./src/music/bahrom-nazarov-atirguldan-farqingiz-yuq.mp3"
       ></audio>
-      <input id="change-volume" value="20" type="range" min="0" max="100" step="1">
+      <input
+        id="change-volume"
+        value="20"
+        type="range"
+        min="0"
+        max="100"
+        step="1"
+      />
       <div>
-        <button class="hvr" id="backward-btn"><i class="fa-solid fa-backward"></i></button>
-        <button class="hvr" id="play-btn"><i class="fa-solid fa-play"></i></button>
-        <button class="hvr" id="forward-btn"><i class="fa-solid fa-forward"></i></button>
+        <button class="hvr" id="backward-btn">
+          <i class="fa-solid fa-backward"></i>
+        </button>
+        <button class="hvr" id="play-btn">
+          <i class="fa-solid fa-play"></i>
+        </button>
+        <button class="hvr" id="forward-btn">
+          <i class="fa-solid fa-forward"></i>
+        </button>
       </div>
     </div>
     <script type="module" src="/src/main.js"></script>

@@ -50,3 +50,106 @@ body {
   background-color: black;
   color: whitesmoke;
 }
+
+.proccess {
+  position: relative;
+  height: 4px;
+  width: 100%;
+  width: 400px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  background: #ccc;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+.proccess:hover .proccess-container {
+  background-color: rgba(255, 0, 0, 0.463);
+}
+
+.proccess-container {
+  height: inherit;
+  width: 0;
+  background-color: red;
+  border-radius: inherit;
+  transition: 0.3s linear;
+}
+
+.time {
+  position: absolute;
+  pointer-events: none;
+}
+
+.time-start {
+  left: 0;
+  top: 13px;
+}
+
+.full-time {
+  right: 0;
+  top: 13px;
+}
+
+.musics-container {
+  text-align: left;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  background-color: aliceblue;
+  padding: 20px;
+  width: 200px;
+  z-index: 100;
+  transform: translate(-100%);
+  transition: 0.3s;
+}
+.musics-container.open {
+  transform: translate(0%);
+}
+
+.music-title {
+  text-align: center;
+}
+
+.music-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.music-item {
+  cursor: pointer;
+  background-color: rgb(215, 236, 255);
+  padding: 5px 10px;
+  border-radius: 8px;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 2px solid transparent;
+}
+
+.music-item-active {
+  border-color: tomato;
+}
+.music-item:hover {
+  background-color: rgb(179, 219, 255);
+}
+
+.music-item-cover {
+  border-radius: 8px;
+  gap: 1rem;
+}
+
+.musics-toggler {
+  background: transparent;
+  border: 0;
+  font-size: 30px;
+  position: absolute;
+  right: -50px;
+  cursor: pointer;
+}
