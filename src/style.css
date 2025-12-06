@@ -153,3 +153,19 @@ body {
   right: -50px;
   cursor: pointer;
 }
+
+.speed-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.speed-btn{
+  gap: 1rem;
+  cursor: pointer;
+  width: 30px;
+  text-align: center;
+
+}

@@ -15,7 +15,9 @@
   </head>
   <body>
     <div class="musics-container">
-      <button id="musics-toggler" class="musics-toggler"><i class="fa-solid fa-bars"></i></button>
+      <button id="musics-toggler" class="musics-toggler">
+        <i class="fa-solid fa-bars"></i>
+      </button>
       <h2 class="music-title">Music List</h2>
       <ul class="music-list">
         <template id="music-item-template">
@@ -42,6 +44,20 @@
         src="./public/cover/bahrom-nazarov-atirguldan-farqingiz-yuq.jpg"
         alt=""
       />
+      <div class="speed-container">
+        <button onclick="setSpeed(0.5)" id="speed-btn" class="speed-btn slow">
+          0.5
+        </button>
+        <button onclick="setSpeed(1)" id="speed-btn" class="speed-btn normal">
+          1
+        </button>
+        <button onclick="setSpeed(1.5)" id="speed-btn" class="speed-btn fast">
+          1.5
+        </button>
+        <button onclick="setSpeed(2)" id="speed-btn" class="speed-btn faster">
+          2
+        </button>
+      </div>
       <div class="proccess">
         <span class="time time-start" id="start-time">00:00</span>
         <div class="proccess-container">

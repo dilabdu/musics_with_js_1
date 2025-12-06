@@ -17,6 +17,8 @@ const musicItemtemplate = document.getElementById("music-item-template");
 const musicList = document.querySelector(".music-list");
 const musicsToggler = document.getElementById("musics-toggler");
 const musicContainer = document.getElementsByClassName("musics-container");
+const speedBtn = document.querySelectorAll("#speed-btn");
+const speedInfo = document.getElementById("speedInfo");
 
 musicsToggler.addEventListener("click", () => {
   musicContainer.classList.toggle("open");
@@ -28,6 +30,10 @@ audioEl.addEventListener("loadeddata", () => {
   audioEl.playbackRate = 1;
 });
 
+function setSpeed(rate) {
+  audioEl.playbackRate=rate;
+  speedInfo.textContent="Current Speed:"+rate+"x"
+}
 let currentVolume = +changeVolumeEl.value / 100;
 audioEl.volume = currentVolume;
 const musics = [
@@ -125,7 +131,7 @@ function setProgressTime(e) {
 }
 
 window.selectMusic = function (e) {
-  console.log(e)
+  console.log(e);
   const musicId = e.dataset.id;
   currentMusic = musicId;
   changeMusic(currentMusic);
